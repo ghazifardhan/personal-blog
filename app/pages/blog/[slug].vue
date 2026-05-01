@@ -32,50 +32,54 @@
         <BlogComments />
       </article>
 
-      <!-- Sidebar (TOC) -->
+      <!-- Sidebar -->
       <aside class="hidden lg:block w-64 shrink-0">
-        <div class="sticky top-24">
-          <h3 class="text-sm font-bold uppercase tracking-wider text-[var(--color-text-primary)] mb-4">Table of Contents</h3>
-          <nav v-if="post.body?.toc?.links?.length" class="space-y-2">
-            <a 
-              v-for="link in post.body.toc.links" 
-              :key="link.id" 
-              :href="`#${link.id}`"
-              class="block text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
-              :class="{ 'ml-4': link.depth > 2 }"
-            >
-              {{ link.text }}
-            </a>
-          </nav>
-        </div>
+        <div class="sticky top-24 space-y-12">
+          <!-- TOC -->
+          <div v-if="post.body?.toc?.links?.length">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-[var(--color-text-primary)] mb-4">Table of Contents</h3>
+            <nav class="space-y-2">
+              <a 
+                v-for="link in post.body.toc.links" 
+                :key="link.id" 
+                :href="`#${link.id}`"
+                class="block text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+                :class="{ 'ml-4': link.depth > 2 }"
+              >
+                {{ link.text }}
+              </a>
+            </nav>
+          </div>
 
-        <div class="mt-8 pt-8 border-t border-[var(--color-border)] sticky top-[calc(24px+200px)]">
-          <h3 class="text-sm font-bold uppercase tracking-wider text-[var(--color-text-primary)] mb-4">Share Article</h3>
-          <div class="flex gap-2">
-            <UButton
-              icon="i-simple-icons:x"
-              color="neutral"
-              variant="ghost"
-              @click="handleShare('twitter')"
-              aria-label="Share on X"
-              :class="{ 'animate-click': animatingBtn === 'twitter' }"
-            />
-            <UButton
-              icon="i-simple-icons:linkedin"
-              color="neutral"
-              variant="ghost"
-              @click="handleShare('linkedin')"
-              aria-label="Share on LinkedIn"
-              :class="{ 'animate-click': animatingBtn === 'linkedin' }"
-            />
-            <UButton
-              icon="i-heroicons:link"
-              color="neutral"
-              variant="ghost"
-              @click="handleShare('copy')"
-              aria-label="Copy Link"
-              :class="{ 'animate-click': animatingBtn === 'copy' }"
-            />
+          <!-- Share -->
+          <div class="pt-8 border-t border-[var(--color-border)]">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-[var(--color-text-primary)] mb-4">Share Article</h3>
+            <div class="flex gap-2">
+              <UButton
+                icon="i-simple-icons:x"
+                color="neutral"
+                variant="ghost"
+                @click="handleShare('twitter')"
+                aria-label="Share on X"
+                :class="{ 'animate-click': animatingBtn === 'twitter' }"
+              />
+              <UButton
+                icon="i-simple-icons:linkedin"
+                color="neutral"
+                variant="ghost"
+                @click="handleShare('linkedin')"
+                aria-label="Share on LinkedIn"
+                :class="{ 'animate-click': animatingBtn === 'linkedin' }"
+              />
+              <UButton
+                icon="i-heroicons:link"
+                color="neutral"
+                variant="ghost"
+                @click="handleShare('copy')"
+                aria-label="Copy Link"
+                :class="{ 'animate-click': animatingBtn === 'copy' }"
+              />
+            </div>
           </div>
         </div>
       </aside>

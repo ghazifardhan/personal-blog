@@ -48,4 +48,10 @@ export default defineNuxtConfig({
     server: false,
     client: false
   },
+
+  vite: {
+    optimizeDeps: {
+      exclude: ['@imgly/background-removal', 'onnxruntime-web']
+    }
+  }
 })

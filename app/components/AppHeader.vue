@@ -10,6 +10,7 @@
       <nav class="hidden md:flex items-center gap-6">
         <NuxtLink to="/blog" class="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">Blog</NuxtLink>
         <NuxtLink to="/projects" class="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">Projects</NuxtLink>
+        <NuxtLink to="/tools" class="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">Tools</NuxtLink>
         <NuxtLink to="/about" class="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">About</NuxtLink>
       </nav>
 
@@ -47,6 +48,7 @@
           <nav class="flex-1 overflow-y-auto p-8 flex flex-col gap-8">
             <NuxtLink to="/blog" class="text-2xl font-semibold text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors" @click="isMobileMenuOpen = false">Blog</NuxtLink>
             <NuxtLink to="/projects" class="text-2xl font-semibold text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors" @click="isMobileMenuOpen = false">Projects</NuxtLink>
+            <NuxtLink to="/tools" class="text-2xl font-semibold text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors" @click="isMobileMenuOpen = false">Tools</NuxtLink>
             <NuxtLink to="/about" class="text-2xl font-semibold text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors" @click="isMobileMenuOpen = false">About</NuxtLink>
           </nav>
 
