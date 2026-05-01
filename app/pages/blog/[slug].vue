@@ -27,6 +27,9 @@
         <div class="prose prose-zinc dark:prose-invert max-w-none prose-pre:bg-[var(--color-code-bg)] prose-pre:border prose-pre:border-[var(--color-border)] prose-headings:text-[var(--color-text-primary)] prose-a:text-[var(--color-accent)]">
           <ContentRenderer v-if="post" :value="post" />
         </div>
+
+        <!-- Comments Section -->
+        <BlogComments />
       </article>
 
       <!-- Sidebar (TOC) -->
