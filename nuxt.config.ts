@@ -24,6 +24,8 @@ export default defineNuxtConfig({
     },
   },
 
+  $production: { studio: false },
+
   colorMode: {
     preference: 'dark',
     fallback: 'dark'
