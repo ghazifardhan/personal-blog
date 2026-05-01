@@ -6,13 +6,12 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/ui',
     '@nuxt/content',
-    '@nuxthq/studio',
+    process.env.NODE_ENV !== 'production' && '@nuxthq/studio',
     '@nuxt/icon',
     '@nuxt/fonts',
     '@nuxtjs/seo',
-    '@nuxtjs/color-mode',
-    'nuxt-studio'
-  ],
+    '@nuxtjs/color-mode'
+  ].filter(Boolean) as string[],
 
   studio: {
     // Studio admin route (default: '/_studio')
