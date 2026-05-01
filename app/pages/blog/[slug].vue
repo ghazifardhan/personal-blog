@@ -48,6 +48,36 @@
             </a>
           </nav>
         </div>
+
+        <div class="mt-8 pt-8 border-t border-[var(--color-border)] sticky top-[calc(24px+200px)]">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-[var(--color-text-primary)] mb-4">Share Article</h3>
+          <div class="flex gap-2">
+            <UButton
+              icon="i-simple-icons:x"
+              color="neutral"
+              variant="ghost"
+              @click="handleShare('twitter')"
+              aria-label="Share on X"
+              :class="{ 'animate-click': animatingBtn === 'twitter' }"
+            />
+            <UButton
+              icon="i-simple-icons:linkedin"
+              color="neutral"
+              variant="ghost"
+              @click="handleShare('linkedin')"
+              aria-label="Share on LinkedIn"
+              :class="{ 'animate-click': animatingBtn === 'linkedin' }"
+            />
+            <UButton
+              icon="i-heroicons:link"
+              color="neutral"
+              variant="ghost"
+              @click="handleShare('copy')"
+              aria-label="Copy Link"
+              :class="{ 'animate-click': animatingBtn === 'copy' }"
+            />
+          </div>
+        </div>
       </aside>
     </div>
 
@@ -104,6 +134,37 @@ useSchemaOrg([
     ]
   })
 ])
+
+const toast = useToast()
+const url = useRequestURL()
+const animatingBtn = ref<string | null>(null)
+
+const handleShare = (platform: string) => {
+  animatingBtn.value = platform
+  setTimeout(() => { animatingBtn.value = null }, 400)
+
+  if (platform === 'twitter') shareOnTwitter()
+  else if (platform === 'linkedin') shareOnLinkedIn()
+  else if (platform === 'copy') copyLink()
+}
+
+const shareOnTwitter = () => {
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.value?.title || '')}&url=${encodeURIComponent(url.href)}`, '_blank')
+}
+
+const shareOnLinkedIn = () => {
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url.href)}`, '_blank')
+}
+
+const copyLink = () => {
+  navigator.clipboard.writeText(url.href)
+  toast.add({
+    title: 'Link copied!',
+    description: 'The article link has been copied to your clipboard.',
+    icon: 'i-heroicons:check-circle',
+    color: 'success'
+  })
+}
 
 const readingProgress = ref(0)
 

@@ -46,6 +46,36 @@
             </span>
           </div>
         </div>
+
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-[var(--color-text-primary)] mb-3">Share Project</h3>
+          <div class="flex gap-2">
+            <UButton
+              icon="i-simple-icons:x"
+              color="neutral"
+              variant="ghost"
+              @click="handleShare('twitter')"
+              aria-label="Share on X"
+              :class="{ 'animate-click': animatingBtn === 'twitter' }"
+            />
+            <UButton
+              icon="i-simple-icons:linkedin"
+              color="neutral"
+              variant="ghost"
+              @click="handleShare('linkedin')"
+              aria-label="Share on LinkedIn"
+              :class="{ 'animate-click': animatingBtn === 'linkedin' }"
+            />
+            <UButton
+              icon="i-heroicons:link"
+              color="neutral"
+              variant="ghost"
+              @click="handleShare('copy')"
+              aria-label="Copy Link"
+              :class="{ 'animate-click': animatingBtn === 'copy' }"
+            />
+          </div>
+        </div>
       </div>
 
       <article class="md:col-span-3 prose prose-zinc dark:prose-invert max-w-none prose-pre:bg-[var(--color-code-bg)] prose-pre:border prose-pre:border-[var(--color-border)] prose-headings:text-[var(--color-text-primary)] prose-a:text-[var(--color-accent)]">
@@ -85,4 +115,35 @@ useSchemaOrg([
     image: project.value?.cover
   })
 ])
+
+const toast = useToast()
+const url = useRequestURL()
+const animatingBtn = ref<string | null>(null)
+
+const handleShare = (platform: string) => {
+  animatingBtn.value = platform
+  setTimeout(() => { animatingBtn.value = null }, 400)
+
+  if (platform === 'twitter') shareOnTwitter()
+  else if (platform === 'linkedin') shareOnLinkedIn()
+  else if (platform === 'copy') copyLink()
+}
+
+const shareOnTwitter = () => {
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(project.value?.title || '')}&url=${encodeURIComponent(url.href)}`, '_blank')
+}
+
+const shareOnLinkedIn = () => {
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url.href)}`, '_blank')
+}
+
+const copyLink = () => {
+  navigator.clipboard.writeText(url.href)
+  toast.add({
+    title: 'Link copied!',
+    description: 'The project link has been copied to your clipboard.',
+    icon: 'i-heroicons:check-circle',
+    color: 'success'
+  })
+}
 </script>
