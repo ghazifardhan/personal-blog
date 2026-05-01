@@ -115,11 +115,32 @@ const interactiveTools = [
     url: '/tools/password-generator'
   },
   {
+    name: 'QRCode Generator',
+    description: 'Generate custom, high-quality QR codes for URLs, text, or contact info instantly.',
+    icon: 'lucide:qr-code',
+    category: 'Utility',
+    url: '/tools/qr-generator'
+  },
+  {
     name: 'Background Remover',
     description: 'Remove image backgrounds instantly and locally in your browser. 100% private.',
     icon: 'lucide:image-minus',
     category: 'Images',
     url: '/tools/background-remover'
+  },
+  {
+    name: 'WebP to PNG',
+    description: 'Convert WebP images to PNG format instantly and privately in your browser.',
+    icon: 'lucide:image',
+    category: 'Images',
+    url: '/tools/webp-to-png'
+  },
+  {
+    name: 'Image Compressor',
+    description: 'Reduce image file size without losing quality locally and privately.',
+    icon: 'lucide:file-down',
+    category: 'Images',
+    url: '/tools/image-compressor'
   },
   {
     name: 'HTML Online Viewer',
