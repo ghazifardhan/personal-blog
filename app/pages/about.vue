@@ -21,7 +21,7 @@
     </div>
 
     <div class="flex flex-col sm:flex-row justify-center gap-4">
-      <UButton to="mailto:hello@example.com" size="xl" color="primary">
+      <UButton to="mailto:ghazi@ghazifadil.com" size="xl" color="primary">
         Get in touch <Icon name="lucide:mail" class="ml-2 w-5 h-5" />
       </UButton>
       <UButton to="/cv.pdf" target="_blank" size="xl" color="neutral" variant="outline">

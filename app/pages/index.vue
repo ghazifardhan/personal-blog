@@ -4,18 +4,45 @@
     <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-32">
       <div class="max-w-3xl">
         <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-[var(--color-text-primary)]">
-          Hi, I'm <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-violet-500">Ghazi Fadil</span>.
+          Hi, I'm <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-violet-500">{{ displayText }}</span><span v-if="showCursor" class="text-indigo-500 animate-pulse ml-1">|</span>.
         </h1>
         <p class="text-xl md:text-2xl text-[var(--color-text-secondary)] mb-10 leading-relaxed">
-          I build fast, accessible, and beautiful web experiences. Passionate about modern tooling, open-source, and excellent user interfaces.
+          Just a dev who loves open-source and building for the web. Welcome to my brain dump where I share my thoughts on all of it.
         </p>
         <div class="flex flex-wrap items-center gap-4">
           <UButton to="/projects" color="primary" size="lg">
             View Projects
           </UButton>
-          <UButton to="/blog" color="neutral" variant="solid" size="lg">
+          <UButton to="/blog" color="neutral" variant="subtle" size="lg">
             Read the Blog
           </UButton>
+          
+          <div class="flex items-center gap-2 md:ml-2">
+            <UButton
+              to="https://github.com/ghazifardhan"
+              target="_blank"
+              icon="i-simple-icons:github"
+              color="neutral"
+              variant="ghost"
+              aria-label="GitHub"
+            />
+            <UButton
+              to="https://linkedin.com/in/ghazifardhan"
+              target="_blank"
+              icon="i-simple-icons:linkedin"
+              color="neutral"
+              variant="ghost"
+              aria-label="LinkedIn"
+            />
+            <UButton
+              to="mailto:ghazi@ghazifadil.com"
+              icon="i-heroicons:envelope"
+              color="neutral"
+              variant="ghost"
+            >
+              Contact Me
+            </UButton>
+          </div>
         </div>
       </div>
     </section>
@@ -51,8 +78,39 @@
     </section>
   </div>
 </template>
-
 <script setup lang="ts">
+const fullText = "Ghazi Fadil"
+const displayText = ref("")
+const showCursor = ref(true)
+const isDeleting = ref(false)
+
+const typeText = () => {
+  const currentLength = displayText.value.length
+  
+  if (!isDeleting.value) {
+    // Typing
+    displayText.value = fullText.substring(0, currentLength + 1)
+    if (displayText.value === fullText) {
+      setTimeout(() => { isDeleting.value = true }, 2000)
+    }
+  } else {
+    // Deleting
+    displayText.value = fullText.substring(0, currentLength - 1)
+    if (displayText.value === "") {
+      isDeleting.value = false
+    }
+  }
+
+  const speed = isDeleting.value ? 50 : 150
+  const timeout = isDeleting.value && displayText.value === "" ? 1000 : (displayText.value === fullText ? 2000 : speed)
+  
+  setTimeout(typeText, timeout)
+}
+
+onMounted(() => {
+  typeText()
+})
+
 const [{ data: featuredProjects }, { data: featuredPosts }] = await Promise.all([
   useAsyncData('featured-projects', () => queryCollection('projects').where('featured', '=', true).limit(3).order('order', 'ASC').all()),
   useAsyncData('featured-posts', () => queryCollection('blog').where('featured', '=', true).limit(3).order('publishedAt', 'DESC').all())

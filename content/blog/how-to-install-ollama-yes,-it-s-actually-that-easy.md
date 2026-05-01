@@ -1,22 +1,18 @@
 ---
-title: How to Install Ollama (Yes, It's Actually That Easy) file
+title: How to Install Ollama (Yes, It's Actually That Easy)
 cover: /Screenshot-2026-05-01-at-17.26.59.png
-description: "Here's your Gen Z-coded guide to installing Ollama:"
+description: "POV: You're tired of paying $20/month for ChatGPT and just found out you can run AI models locally on your own machine."
 draft: false
 featured: true
 navigation:
-  description: "Here's your Gen Z-coded guide to installing Ollama:"
-  title: How to Install Ollama (Yes, It's Actually That Easy) file
+  description: "POV: You're tired of paying $20/month for ChatGPT and just found out you can run AI models locally on your own machine."
+  title: How to Install Ollama (Yes, It's Actually That Easy)
 publishedAt: 2026-05-01 17:27:00
 readTime: 5
+tags:
+  - ollama
 updatedAt: 2026-05-01 17:27:00
 ---
-
-Here's your Gen Z-coded guide to installing Ollama:
-
----
-
-# How to Install Ollama (Yes, It's Actually That Easy)
 
 POV: You're tired of paying $20/month for ChatGPT and just found out you can run AI models *locally* on your own machine. For free. Welcome to the Ollama era.
 

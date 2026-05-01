@@ -2,10 +2,10 @@
 title: Ghazi Fadil Website
 cover: https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2000&auto=format&fit=crop
 description: A minimalist, high-performance portfolio and blog built with Nuxt 4.
-featured: true
+featured: false
 github: https://github.com/ghazifadil/personal-blog
-live: https://example.com
-order: 1
+live: https://ghazifadil.com
+order: 2
 stack:
   - Nuxt 4
   - Vue 3
@@ -17,6 +17,7 @@ tags:
   - frontend
   - design
   - ssr
+draft: true
 ---
 
 ## The Challenge

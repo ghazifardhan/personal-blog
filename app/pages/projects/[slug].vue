@@ -52,6 +52,9 @@
         <ContentRenderer :value="project" />
       </article>
     </div>
+
+    <!-- Comments Section -->
+    <BlogComments />
   </div>
 </template>
 
