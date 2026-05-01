@@ -4,7 +4,7 @@
     
     <div class="prose prose-zinc dark:prose-invert max-w-none mb-16 prose-p:text-lg prose-p:leading-relaxed text-justify">
       <p>
-        Hello I'm Ghazi Fadil, a results-driven Technical Lead and Software Engineer with over 10 years of experience in designing, developing, and scaling cross-platform applications (Backend, Frontend, and Mobile). Proven track record of leading engineering teams, managing the full software development lifecycle, and optimizing operational efficiency. Possesses deep technical expertise in modern tech stacks (Golang, ReactJS, Flutter), CI/CD integration, server infrastructure management, and leveraging AI companions to accelerate the delivery of robust, scalable, and high-impact software solutions. Currently serving as Head of Software Engineering, focusing on digital transformation and technological innovation.
+        Hello I'm Ghazi Fadil, a results-driven Technical Lead and Software Engineer with over 10 years of experience in designing, developing, and scaling cross-platform applications (Backend, Frontend, and Mobile). Proven track record of leading engineering teams, managing the full software development lifecycle, and optimizing operational efficiency. Possesses deep technical expertise in modern tech stacks (Golang, ReactJS, Flutter), CI/CD integration, server infrastructure management, and leveraging AI companions to accelerate the delivery of robust, scalable, and high-impact software solutions.
       </p>
     </div>
 
