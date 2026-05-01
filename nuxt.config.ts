@@ -42,5 +42,10 @@ export default defineNuxtConfig({
 
   robots: {
     disallow: ['/studio']
-  }
+  },
+
+  sourcemap: {
+    server: false,
+    client: false
+  },
 })
