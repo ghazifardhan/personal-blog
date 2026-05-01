@@ -1,11 +1,15 @@
 ---
-title: "Embracing Nuxt 4 and Tailwind v4"
-description: "A deep dive into setting up a modern personal branding website with Nuxt 4, Nuxt Content v3, and the latest Tailwind CSS v4 features."
-publishedAt: "2026-05-01"
-tags: ["nuxt", "tailwindcss", "frontend"]
-cover: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop"
-readTime: 4
+title: Embracing Nuxt 4 and Tailwind v4
+cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop
+description: A deep dive into setting up a modern personal branding website with Nuxt 4, Nuxt Content v3, and the latest Tailwind CSS v4 features.
+draft: false
 featured: true
+publishedAt: 2026-05-01
+readTime: 4
+tags:
+  - nuxt
+  - tailwindcss
+  - frontend
 ---
 
 # Introduction

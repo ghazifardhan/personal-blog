@@ -10,8 +10,24 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/fonts',
     '@nuxtjs/seo',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    'nuxt-studio'
   ],
+
+  studio: {
+    // Studio admin route (default: '/_studio')
+    route: '/_studio',
+
+    // Git repository configuration (owner and repo are required)
+    repository: {
+      provider: 'github', // 'github' or 'gitlab'
+      owner: 'ghazifardhan', // your GitHub/GitLab username or organization
+      repo: 'personal-blog', // your repository name
+      branch: 'main', // the branch to commit to (default: main)
+    },
+
+    enabled: true
+  },
 
   colorMode: {
     preference: 'dark',
@@ -25,10 +41,6 @@ export default defineNuxtConfig({
     name: 'Ghazi Fadil Website',
     description: 'A minimalist personal branding website and blog.',
     defaultLocale: 'en'
-  },
-
-  studio: {
-    enabled: true
   },
 
   robots: {
