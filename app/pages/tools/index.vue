@@ -143,6 +143,20 @@ const interactiveTools = [
     url: '/tools/image-compressor'
   },
   {
+    name: 'Image Cropper',
+    description: 'Crop and rotate your images with precision using local processing.',
+    icon: 'lucide:crop',
+    category: 'Images',
+    url: '/tools/image-cropper'
+  },
+  {
+    name: 'App Icon Generator',
+    description: 'Create professional app icons for iOS, Android, and Web with multi-size export.',
+    icon: 'lucide:layout-grid',
+    category: 'Images',
+    url: '/tools/app-icon-generator'
+  },
+  {
     name: 'HTML Online Viewer',
     description: 'A real-time HTML, CSS, and JavaScript editor and previewer for quick prototyping.',
     icon: 'lucide:code-2',
