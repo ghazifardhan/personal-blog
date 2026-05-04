@@ -5,7 +5,7 @@ description: A minimalist, high-performance portfolio and blog built with Nuxt 4
 featured: false
 github: https://github.com/ghazifadil/personal-blog
 live: https://ghazifadil.com
-order: 2
+order: 3
 stack:
   - Nuxt 4
   - Vue 3

@@ -5,7 +5,7 @@ description: "POV: You're tired of spending hours cropping videos and adding sub
 featured: true
 github: https://github.com/ghazifardhan/api-clippers
 live: https://ghazifadil.com
-order: 1
+order: 2
 stack:
   - Python
 status: completed
