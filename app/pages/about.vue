@@ -36,7 +36,7 @@ useSeoMeta({
   title: 'About | Ghazi Fadil',
   description: 'Learn about Ghazi Fadil\'s 10+ years of experience leading engineering teams and building scalable cross-platform solutions.',
   ogTitle: 'About Ghazi Fadil',
-  ogDescription: 'Technical Lead & Head of Software Engineering profile.'
+  ogDescription: 'Devs Profile.'
 })
 
 useSchemaOrg([

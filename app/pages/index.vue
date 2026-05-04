@@ -117,10 +117,10 @@ const [{ data: featuredProjects }, { data: featuredPosts }] = await Promise.all(
 ])
 
 useSeoMeta({
-  title: 'Ghazi Fadil | Head of Software Engineering & Technical Lead',
-  description: 'Portfolio and blog of Ghazi Fadil, a Technical Lead and Head of Software Engineering with 10+ years of experience in Golang, React, and Flutter.',
-  ogTitle: 'Ghazi Fadil | Head of Software Engineering',
-  ogDescription: 'Explore the projects and technical insights of Ghazi Fadil.',
+  title: 'Ghazi Fadil | Devs Profile',
+  description: 'Explore the projects and technical insights of Ghazi Fadil, a software engineer with 10+ years of experience in Golang, React, and Flutter.',
+  ogTitle: 'Ghazi Fadil | Devs Profile',
+  ogDescription: 'Explore the projects and technical insights of Ghazi Fadil, a software engineer with 10+ years of experience in Golang, React, and Flutter.',
   ogType: 'website',
   twitterCard: 'summary_large_image',
 })
@@ -128,7 +128,7 @@ useSeoMeta({
 useSchemaOrg([
   definePerson({
     name: 'Ghazi Fadil',
-    jobTitle: 'Head of Software Engineering',
+    jobTitle: 'Devs',
     url: 'https://ghazifadil.com',
     sameAs: [
       'https://github.com/ghazifardhan',
