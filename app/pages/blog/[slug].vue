@@ -111,6 +111,7 @@ if (!post.value) {
 const { data: relatedPosts } = await useAsyncData(`blog-${route.params.slug}-related`, () => 
   queryCollection('blog')
     .where('path', '<>', route.path)
+    .where('draft', '=', false)
     .limit(3)
     .all()
 )

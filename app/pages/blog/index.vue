@@ -31,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-const { data: posts } = await useAsyncData('blog-list', () => queryCollection('blog').order('publishedAt', 'DESC').all())
+const { data: posts } = await useAsyncData('blog-list', () => queryCollection('blog').where('draft', '=', false).order('publishedAt', 'DESC').all())
 
 const activeTag = ref<string | null>(null)
 

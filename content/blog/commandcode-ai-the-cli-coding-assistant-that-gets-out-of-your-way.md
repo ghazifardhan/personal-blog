@@ -2,8 +2,8 @@
 title: CommandCode.ai — The CLI Coding Assistant That Gets Out of Your Way
 cover: /commandcode-ai-cover.png
 description: I've used plenty of AI coding tools. Most of them want to replace your editor, restructure your workflow, or at least open a browser tab. CommandCode.ai does none of that. It's a CLI-native coding assistant that lives in your terminal and respects the way you already work.
-draft: false
-featured: true
+draft: true
+featured: false
 navigation:
   description: I've used plenty of AI coding tools. Most of them want to replace your editor, restructure your workflow, or at least open a browser tab. CommandCode.ai does none of that. It's a CLI-native coding assistant that lives in your terminal and respects the way you already work.
   title: CommandCode.ai — The CLI Coding Assistant That Gets Out of Your Way
@@ -130,4 +130,4 @@ Sometimes the best tools are the ones that know their place.
 
 ---
 
-*Tags:* `commandcode`, `ai-tools`, `cli`, `developer-workflow`, `productivity`
+_Tags:_ `commandcode`, `ai-tools`, `cli`, `developer-workflow`, `productivity`
