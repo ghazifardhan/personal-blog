@@ -37,5 +37,5 @@ jobs:
             cd ${{ secrets.DEPLOY_PATH || '/var/www/html/personal-blog' }}
             git pull origin main
             pnpm install
-            pnpm run build
+            pnpm run build:prod
             sudo systemctl restart personal-blog
