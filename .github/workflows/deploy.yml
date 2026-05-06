@@ -44,4 +44,4 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           port: ${{ secrets.SSH_PORT || 22 }}
           script: |
-            sudo systemctl restart personal-blog
+            sudo systemctl restart personalblog.service
