@@ -1,6 +1,6 @@
 ---
 title: How to Install Flutter on Windows, macOS & Linux (No Cap, It's Easy)
-cover: /Flutter-logo.svg
+cover: /flutter-cover.png
 description: "Thinking about building cross-platform apps but scared of the Flutter setup process? Trust me, it's not that deep. Here is the ultimate no-nonsense guide to getting Flutter up and running on Windows, macOS, and Linux so you can start shipping to iOS and Android from one codebase."
 draft: false
 featured: false
