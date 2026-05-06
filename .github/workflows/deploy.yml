@@ -24,7 +24,18 @@ jobs:
       - name: Build project
         run: yarn build:prod
 
-      - name: Deploy to VPS via SSH
+      - name: Copy build artifacts to VPS
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          source: ".output"
+          target: ${{ secrets.DEPLOY_PATH || '/var/www/html/personal-blog' }}
+
+      - name: Restart Systemd Service
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -33,8 +44,4 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           port: ${{ secrets.SSH_PORT || 22 }}
           script: |
-            cd ${{ secrets.DEPLOY_PATH || '/var/www/html/personal-blog' }}
-            git pull origin main
-            yarn install
-            yarn build:prod
             sudo systemctl restart personal-blog
