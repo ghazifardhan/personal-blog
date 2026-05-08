@@ -9,7 +9,7 @@ The user requested to add Google Analytics to the personal blog project.
 
 ## Technical Decisions
 - **`nuxt-gtag` Module**: Chosen as the standard, community-supported way to integrate GA4 with Nuxt 3. It handles client-side script injection and automatic page view tracking efficiently.
-- **Environment Variable**: Using `NUXT_PUBLIC_GTAG_ID` allows for secure management of the tracking ID across different environments (dev, staging, production) without hardcoding it in the repository.
+- **Config-based ID**: While environment variables are preferred, I have baked the Measurement ID directly into `nuxt.config.ts`. This ensures that the ID is available in the production build even if the VPS environment variables or `.env` files are not properly configured during deployment.
 - **`--ignore-engines`**: Necessary during installation because the current environment's Node version (20.18.1) was slightly behind the requirement for `@nuxt/content` (20.19.0), although the project was already running with that dependency.
 
 ## Verification
