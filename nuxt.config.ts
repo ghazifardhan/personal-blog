@@ -23,7 +23,7 @@ export default defineNuxtConfig({
   ],
 
   gtag: {
-    id: undefined // Managed via NUXT_PUBLIC_GTAG_ID env var
+    id: 'G-G089674K31'
   },
 
   studio: {
