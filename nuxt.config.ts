@@ -18,8 +18,13 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxtjs/seo',
     '@nuxtjs/color-mode',
-    'nuxt-studio'
+    'nuxt-studio',
+    'nuxt-gtag'
   ],
+
+  gtag: {
+    id: undefined // Managed via NUXT_PUBLIC_GTAG_ID env var
+  },
 
   studio: {
     enabled: true,
