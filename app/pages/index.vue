@@ -7,7 +7,7 @@
           Hi, I'm <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-violet-500">{{ displayText }}</span><span v-if="showCursor" class="text-indigo-500 animate-pulse ml-1">|</span>.
         </h1>
         <p class="text-xl md:text-2xl text-[var(--color-text-secondary)] mb-10 leading-relaxed">
-          Just a dev who loves open-source and building for the web. Welcome to my brain dump where I share my thoughts on all of it.
+          Engineering Leader with 10+ years of experience building and scaling software teams. Passionate about AI-assisted development, high-performance architecture, and crafting seamless user experiences.
         </p>
         <div class="flex flex-wrap items-center gap-4">
           <UButton to="/projects" color="primary" size="lg">
@@ -117,10 +117,10 @@ const [{ data: featuredProjects }, { data: featuredPosts }] = await Promise.all(
 ])
 
 useSeoMeta({
-  title: 'Ghazi Fadil | Devs Profile',
-  description: 'Explore the projects and technical insights of Ghazi Fadil, a software engineer with 10+ years of experience in Golang, React, and Flutter.',
-  ogTitle: 'Ghazi Fadil | Devs Profile',
-  ogDescription: 'Explore the projects and technical insights of Ghazi Fadil, a software engineer with 10+ years of experience in Golang, React, and Flutter.',
+  title: 'Ghazi Fadil | Engineering Leader',
+  description: 'Engineering Leader with 10+ years of experience in building scalable platforms (Golang, React, Flutter) and leading high-performance engineering teams.',
+  ogTitle: 'Ghazi Fadil | Engineering Leader',
+  ogDescription: 'Engineering Leader with 10+ years of experience in building scalable platforms (Golang, React, Flutter) and leading high-performance engineering teams.',
   ogType: 'website',
   twitterCard: 'summary_large_image',
 })
@@ -128,7 +128,7 @@ useSeoMeta({
 useSchemaOrg([
   definePerson({
     name: 'Ghazi Fadil',
-    jobTitle: 'Devs',
+    jobTitle: 'Head of Software Engineering',
     url: 'https://ghazifadil.com',
     sameAs: [
       'https://github.com/ghazifardhan',
