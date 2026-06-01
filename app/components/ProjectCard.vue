@@ -1,7 +1,11 @@
 <template>
   <NuxtLink :to="to" class="group block h-full bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl overflow-hidden transition-all duration-200 ease-out hover:-translate-y-[2px] hover:shadow-md flex flex-col">
-    <div v-if="project.cover" class="aspect-[16/9] w-full overflow-hidden bg-[var(--color-surface-raised)] border-b border-[var(--color-border)] shrink-0">
-      <img :src="project.cover" :alt="project.title" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+    <div class="aspect-[16/9] w-full overflow-hidden bg-[var(--color-surface-raised)] border-b border-[var(--color-border)] shrink-0 flex items-center justify-center">
+      <img v-if="project.cover" :src="project.cover" :alt="project.title" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+      <div v-else class="flex flex-col items-center justify-center text-[var(--color-text-secondary)] opacity-50">
+        <Icon name="lucide:code-2" class="w-12 h-12 mb-2" />
+        <span class="text-xs font-medium uppercase tracking-wider">Project Preview</span>
+      </div>
     </div>
     <div class="p-6 flex flex-col flex-grow">
       <div class="flex items-center justify-between mb-3">
